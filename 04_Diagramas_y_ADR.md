@@ -52,33 +52,3 @@ classDiagram
     Cliente "1" -- "0..*" CotizacionFormal : solicita
     CotizacionFormal "1" -- "0..1" OrdenDeServicio : genera
     OrdenDeServicio "1" -- "1" Cuadrilla : asignada a**
-
-sequenceDiagram
-    actor Coordinador
-    participant ServicioCotizacion
-    participant CotizacionFormal
-    actor Gerencia
-
-    Coordinador->>ServicioCotizacion: AplicarDescuento(folio, 15%)
-    ServicioCotizacion->>CotizacionFormal: aplicarDescuento(15%)
-    CotizacionFormal-->>ServicioCotizacion: Error: Requiere Autorizacion de Gerencia
-    ServicioCotizacion->>CotizacionFormal: cambiarEstado("Pendiente Autorizacion")
-    ServicioCotizacion->>Gerencia: Notificar Solicitud
-    Gerencia->>ServicioCotizacion: AutorizarDescuento(folio)
-    ServicioCotizacion->>CotizacionFormal: confirmarDescuento(15%)
-    CotizacionFormal-->>ServicioCotizacion: Descuento Aplicado Exitosamente
-
-sequenceDiagram
-    actor Coordinador
-    participant ServicioCotizacion
-    participant CotizacionFormal
-    actor Gerencia
-
-    Coordinador->>ServicioCotizacion: AplicarDescuento(folio, 15%)
-    ServicioCotizacion->>CotizacionFormal: aplicarDescuento(15%)
-    CotizacionFormal-->>ServicioCotizacion: Error: Requiere Autorizacion de Gerencia
-    ServicioCotizacion->>CotizacionFormal: cambiarEstado("Pendiente Autorizacion")
-    ServicioCotizacion->>Gerencia: Notificar Solicitud
-    Gerencia->>ServicioCotizacion: AutorizarDescuento(folio)
-    ServicioCotizacion->>CotizacionFormal: confirmarDescuento(15%)
-    CotizacionFormal-->>ServicioCotizacion: Descuento Aplicado Exitosamente
