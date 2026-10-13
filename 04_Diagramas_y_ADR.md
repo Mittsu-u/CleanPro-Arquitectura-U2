@@ -9,8 +9,8 @@ El sistema CleanPro necesita gestionar cotizaciones, asignación de cuadrillas y
 Se decide utilizar el patrón de diseño **Domain Model** (Modelo de Dominio) con un enfoque de Domain-Driven Design (DDD), aislando la lógica de negocio en Entidades y Objetos de Valor (como `CotizacionFormal` y `OrdenDeServicio`). Se utilizará un **Service Layer** exclusivamente para orquestar los casos de uso, sin contener lógica de negocio.
 
 **Consecuencias:**
-* Positivas: Se garantiza que el sistema no procese estados inválidos. La lógica está centralizada y es fácil de mantener si cambian las políticas de la empresa.
-* Negativas: Requiere un mayor esfuerzo de diseño inicial en comparación con un script secuencial directo.
+- Positivas: Se garantiza que el sistema no procese estados inválidos. La lógica está centralizada y es fácil de mantener si cambian las políticas de la empresa.
+- Negativas: Requiere un mayor esfuerzo de diseño inicial en comparación con un script secuencial directo.
 
 ---
 
