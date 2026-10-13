@@ -2,8 +2,7 @@
 
 ### 01 Elegir Patrones de Lógica de Negocio
 
-Justificación del Patrón Seleccionado
-Para el desarrollo del sistema de gestión de CleanPro, se elige implementar el patrón Domain Model (Modelo de Dominio) en lugar de un Transaction Script. 
+Justificación del Patrón Seleccionado para el desarrollo del sistema de gestión de CleanPro, se elige implementar el patrón Domain Model (Modelo de Dominio) en lugar de un Transaction Script. 
 
 La razón principal es que CleanPro maneja reglas de negocio complejas e invariantes estrictas. Por ejemplo, el sistema debe bloquear descuentos mayores al 10% a menos que tengan autorización de gerencia (RN-01), aplicar penalizaciones exactas por cancelaciones tardías (RN-04) o accesos denegados (RN-05), y la orden de servicio sigue una máquina de estados estricta (desde cotización hasta servicio facturable). 
 
